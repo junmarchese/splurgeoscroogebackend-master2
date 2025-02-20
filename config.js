@@ -3,8 +3,8 @@ require('dotenv').config();
 
 const sequelize = new Sequelize(process.env.DATABASE_URL, {
   dialect: 'postgres',
-  logging: false,
-  dialectOptions: process.env.NODE_ENV === "production" ? { ssl: { rejectUnauthorized: false } } : {},
+  logging: false
+  //dialectOptions: process.env.NODE_ENV === "production" ? { ssl: { rejectUnauthorized: false } } : {},
 });
 
 const JWT_SECRET = process.env.JWT_SECRET || "secret-dev";
